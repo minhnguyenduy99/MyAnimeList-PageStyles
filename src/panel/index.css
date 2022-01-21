@@ -5,7 +5,7 @@
 :root {
   --primary: #e81526;
   --primary-dark: #bf0817;
-  --primary-light: #db3d4b;
+  --primary-light: #ff2d4c;
   --light-color: hsl(0, 0%, 100%);
   --grey-light: hsl(0, 0%, 71%);
   --dark-color: rgba(0, 0, 0, 0.8);
@@ -353,4 +353,75 @@ body a {
 .list-table .list-table-data .data.image .image:hover {
   opacity: 1;
   transform: translateY(-10px);
+}
+
+
+/*
+List Menu
+*/
+.list-menu-float {
+  padding: 8px;
+  background: var(--dark-color);
+  opacity: 0.9;
+}
+
+.list-menu-float .icon-menu {
+  border-radius: 50px;
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.list-menu-float .icon-menu svg.icon {
+  fill: var(--primary);
+}
+
+.list-menu-float .icon-menu span.text {
+  font-weight: bold;
+}
+
+.list-menu-float .icon-menu span.text:not(:last-child) {
+  margin-top: 2px;
+}
+
+.list-menu-float .icon-menu:not(.profile):hover {
+  background: var(--primary) !important;
+  color: var(--light-color);
+  padding-right: 10px;
+}
+
+.list-menu-float .icon-menu:hover svg.icon {
+  fill: var(--light-color);
+}
+
+.list-menu-float .icon-menu:hover span.text > a {
+  background: var(--primary) !important;
+}
+
+/* 
+************************************************************************************************
+Style for item menu with multiple children
+************************************************************************************************
+*/
+.list-menu-float .icon-menu.setting:hover {
+  display: flex !important;
+  width: auto !important;
+  padding-right: 0;
+}
+
+.list-menu-float .icon-menu.setting:hover span.text {
+  display: flex !important;
+  width: auto !important;
+}
+
+.list-menu-float .icon-menu.setting:hover span.text a {
+  border: none !important;
+  position: static !important;
+}
+
+.list-menu-float .icon-menu.setting:hover span.text a:last-child {
+  border-radius: 0 50px 50px 0;
+}
+
+.list-menu-float .icon-menu.setting:hover span.text a:hover {
+  background: var(--primary-light);
 }
