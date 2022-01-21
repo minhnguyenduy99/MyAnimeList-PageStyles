@@ -494,26 +494,23 @@ List Menu
 Style for item menu with multiple children
 ************************************************************************************************
 */
-.list-menu-float .icon-menu.setting:hover {
-  display: flex !important;
-  width: auto !important;
-  padding-right: 0;
-}
-
-.list-menu-float .icon-menu.setting:hover span.text {
+.list-menu-float .icon-menu.setting span.text {
   display: flex !important;
   width: auto !important;
 }
 
-.list-menu-float .icon-menu.setting:hover span.text a {
+.list-menu-float .icon-menu.setting span.text a {
   border: none !important;
   position: static !important;
 }
 
-.list-menu-float .icon-menu.setting:hover span.text a:last-child {
+.list-menu-float .icon-menu.setting span.text a:last-child {
+  padding-right: 10px;
   border-radius: 0 50px 50px 0;
 }
 
-.list-menu-float .icon-menu.setting:hover span.text a:hover {
-  background: var(--primary-light);
+.list-menu-float .icon-menu.setting:hover {
+  display: flex !important;
+  padding-right: 0;
 }
+
