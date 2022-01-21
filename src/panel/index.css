@@ -25,11 +25,6 @@
   box-sizing: border-box;
 }
 
-
-.list-unit .list-status-title {
-  background-color: var(--primary);
-}
-
 body {
   color: var(--light-color);
 }
@@ -39,8 +34,8 @@ body a {
 }
 
 /**
-    End 
-    **/
+End 
+**/
 
 
 /* Header */
@@ -139,10 +134,107 @@ body a {
   color: var(--primary);
 }
 
-/* list status */
+/*
+***************************************************************
+List Status bar
+***************************************************************
+*/
 .list-status-title {
+  background: transparent !important;
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center;
+  height: auto !important;
+}
+
+.list-status-title > span.text {
   display: none !important;
 }
+
+.list-status-title > span.stats {
+  position: static !important;
+  height: auto !important;
+  display: flex;
+}
+
+.list-status-title > span.stats > a {
+  display: block;
+  padding: 6px 10px;
+  color: var(--light-color) !important;
+  font-size: 1rem !important;
+}
+
+.list-status-title > span.stats > a:hover {
+  color: var(--primary) !important;
+}
+
+.list-status-title > span.stats > a:first-child {
+  margin-right: 10px;
+}
+
+/*
+***************************************************************
+Stats displayer
+***************************************************************
+*/
+.list-stats {
+  background: var(--primary-dark) !important;
+  width: 100% !important;
+  justify-content: center;
+  height: auto !important;
+  color: var(--light-color) !important;
+}
+
+/*
+***************************************************************
+Advanced Filter Dialog (#advanced-options)
+***************************************************************
+*/
+div#advanced-options {
+
+}
+
+div#advanced-options h2.advanced-options-header {
+  text-transform: uppercase;
+}
+
+div#advanced-options h2.advanced-options-header > span.description {
+  text-transform: none;
+}
+
+/*
+***************************************************************
+Sort
+***************************************************************
+*/
+#advanced-options .sort-widget input[type=radio]:checked + label {
+  background-color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+#advanced-options .advanced-options-button > * {
+  padding: 10px;
+  height: auto !important;
+}
+
+#advanced-options .advanced-options-button > .btn-apply {
+  background: var(--primary) !important;
+}
+
+#advanced-options .advanced-options-button > .btn-apply:hover {
+  background: var(--primary-light) !important;
+}
+
+#advanced-options .advanced-options-button > .btn-clear {
+  background: transparent;
+  color: var(--light-color);
+  border: 1px solid var(--primary);
+}
+
+#advanced-options .advanced-options-button > .btn-clear:hover {
+  background: var(--primary);
+}
+
 
 /* data table */
 
